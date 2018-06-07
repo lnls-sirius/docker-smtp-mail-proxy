@@ -1,11 +1,13 @@
 version: '3.2'
 services:
-    alarm-server:
+    mail-proxy:
         image: lnlscon/mail-proxy:latest
         hostname: mail-proxy
         dns:
             - 10.0.0.71
             - 10.0.0.72
+        ports:
+            - "25:25"
         deploy:
             resources:
               limits:
